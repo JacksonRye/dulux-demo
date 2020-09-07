@@ -1,0 +1,32 @@
+@import "config";
+
+.Palette {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Color {
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.ColorInPalette {
+}
+
+.sizeUp {
+    input[type="radio"]:checked + label {
+      transform: scale(1.5);
+    }
+
+}
