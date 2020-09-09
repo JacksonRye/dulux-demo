@@ -24,7 +24,8 @@ const ColorRow = ({ colors, handleSelectedColor, selectedColor }) => {
 
       { arrayOfObjectContains(colors, selectedColor) ? (
         <div className="color-info" style={{ backgroundColor: selectedColor }}>
-          <p>lorem ipsom</p>
+          <p className="more-about">More about this color</p>
+          <p className="link-to-cart">I'd like to find a product in this color</p>
         </div>
       ) : null}
     </div>

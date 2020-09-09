@@ -47,12 +47,15 @@ const initialState = {
   paletteColors: [
     {
       hexColor: "#dadccc",
+      name: "white"
     },
     {
       hexColor: "#ff8900",
+      name: "orange"
     },
     {
       hexColor: "#00b5a2",
+      name: "green"
     },
   ],
 
@@ -64,7 +67,13 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  function setColorList(color) {}
+  function setColorList(color) {
+    console.log(`setColorList: ${color}`);
+    dispatch({
+      type: "SET_COLOR_LIST",
+      payload: colors[color]
+    })
+  }
 
   return (
     <GlobalContext.Provider
@@ -72,6 +81,7 @@ export const GlobalProvider = ({ children }) => {
         colors: state.colors,
         paletteColors: state.paletteColors,
         colorList: state.colorList,
+        setColorList
       }}
     >
       {children}

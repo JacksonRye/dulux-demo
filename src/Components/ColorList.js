@@ -28,7 +28,7 @@ const ColorList = () => {
 
   useEffect(() => {
     setRows(getSubArrays(colorList, 2));
-  }, []);
+  }, [colorList]);
 
   return (
     <div className="ColorList">
