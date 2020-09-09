@@ -6,39 +6,49 @@ const colors = {
   white: [
     {
       hexColor: "#f4f0e4",
+      name: "white",
     },
     {
       hexColor: "#efe9df",
+      name: "white",
     },
     {
       hexColor: "#f1e9dc",
+      name: "white",
     },
     {
       hexColor: "#eeefea",
+      name: "white",
     },
   ],
   orange: [
     {
       hexColor: "#ed8c32",
+      name: "orange",
     },
     {
       hexColor: "#d35338",
+      name: "orange",
     },
     {
       hexColor: "#f0c8b0",
+      name: "orange",
     },
   ],
   green: [
     {
       hexColor: "#2d6456",
+      name: "green",
     },
 
     {
       hexColor: "#90ddcd",
+      name: "green",
     },
 
     {
       hexColor: "#bee9de",
+      name: "green",
     },
   ],
 };
@@ -47,15 +57,15 @@ const initialState = {
   paletteColors: [
     {
       hexColor: "#dadccc",
-      name: "white"
+      name: "white",
     },
     {
       hexColor: "#ff8900",
-      name: "orange"
+      name: "orange",
     },
     {
       hexColor: "#00b5a2",
-      name: "green"
+      name: "green",
     },
   ],
 
@@ -71,8 +81,8 @@ export const GlobalProvider = ({ children }) => {
     console.log(`setColorList: ${color}`);
     dispatch({
       type: "SET_COLOR_LIST",
-      payload: colors[color]
-    })
+      payload: colors[color],
+    });
   }
 
   return (
@@ -81,7 +91,7 @@ export const GlobalProvider = ({ children }) => {
         colors: state.colors,
         paletteColors: state.paletteColors,
         colorList: state.colorList,
-        setColorList
+        setColorList,
       }}
     >
       {children}

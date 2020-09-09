@@ -19,11 +19,19 @@ const ColorList = () => {
 
   const [selectedColor, setSelectedColor] = useState(null);
 
+  const [paintColor, setPaintColor] = useState(null)
+
   const [rows, setRows] = useState([]);
 
   function handleSelectedColor(color) {
+
+    const {hexColor, name} = color
+
     setSelectedColor(null);
-    setSelectedColor(color);
+    setSelectedColor(hexColor);
+
+    setPaintColor(name)
+
   }
 
   useEffect(() => {
@@ -39,6 +47,7 @@ const ColorList = () => {
           colors={colors}
           key={index}
           selectedColor={selectedColor}
+          paintColor={paintColor}
           handleSelectedColor={handleSelectedColor}
         />
       ))}

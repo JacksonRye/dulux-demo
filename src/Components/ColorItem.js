@@ -8,7 +8,7 @@ const ColorItem = ({ color, group, setSelectedColor }) => {
     <>
       <div style={backgroundStyle} className="ColorItem Color ">
         <input
-          onClick={() => setSelectedColor(hexColor)}
+          onClick={() => setSelectedColor(color)}
           type="radio"
           name={group}
           id={hexColor}

@@ -1,5 +1,6 @@
 import React from "react";
 import ColorItem from "./ColorItem";
+import { Link } from "react-router-dom";
 
 function arrayOfObjectContains(array, value) {
   const values = array.map((obj) => obj.hexColor);
@@ -7,7 +8,10 @@ function arrayOfObjectContains(array, value) {
   return values.includes(value);
 }
 
-const ColorRow = ({ colors, handleSelectedColor, selectedColor }) => {
+const ColorRow = ({ colors, handleSelectedColor, selectedColor, paintColor }) => {
+
+  
+
   return (
     <div className="ColorRow">
       <div className="color-grid">
@@ -22,10 +26,12 @@ const ColorRow = ({ colors, handleSelectedColor, selectedColor }) => {
         ))}
       </div>
 
-      { arrayOfObjectContains(colors, selectedColor) ? (
+      {arrayOfObjectContains(colors, selectedColor) && selectedColor ? (
         <div className="color-info" style={{ backgroundColor: selectedColor }}>
           <p className="more-about">More about this color</p>
-          <p className="link-to-cart">I'd like to find a product in this color</p>
+          <Link to={`/paints/${paintColor}`} className="link-to-cart">
+            I'd like to find a product in this color
+          </Link>
         </div>
       ) : null}
     </div>

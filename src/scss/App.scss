@@ -56,16 +56,35 @@
     margin-top: 1rem;
     padding: 2rem;
 
-   .more-about {
-     text-align: end;
-     margin-bottom: 0.5rem;
-   }
+    .more-about {
+      text-align: end;
+      margin-bottom: 0.5rem;
+    }
 
-   .link-to-cart {
-     text-align: center;
-     background: white;
-     padding: 1rem;
-   }
-
+    .link-to-cart {
+      text-align: center;
+      background: white;
+      padding: 1rem;
+    }
   }
+}
+
+.ProductList {
+
+}
+
+
+.ProductItem {
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
+
 }
