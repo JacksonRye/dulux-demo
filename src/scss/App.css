@@ -25,8 +25,37 @@
   cursor: pointer;
 }
 
-.sizeUp input[type="radio"]:checked + label {
+.ColorInPalette input[type="radio"]:checked + label {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.ColorItem input[type="radio"]:checked + label {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.ColorList .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+}
+
+.ColorRow {
+  margin-bottom: 0.2rem;
+}
+
+.ColorRow .color-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 0.2rem;
+}
+
+.ColorRow .color-info {
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=App.css.map */

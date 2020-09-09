@@ -22,11 +22,38 @@
 }
 
 .ColorInPalette {
+  input[type="radio"]:checked + label {
+    transform: scale(1.5);
+  }
 }
 
-.sizeUp {
-    input[type="radio"]:checked + label {
+.ColorItem {
+  input[type="radio"]:checked {
+    & + label {
       transform: scale(1.5);
     }
+  }
+}
 
+.ColorList {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.2rem;
+  }
+}
+
+.ColorRow {
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+
+  margin-bottom: 0.2rem;
+
+  .color-info {
+    margin-top: 1rem;
+
+  }
 }

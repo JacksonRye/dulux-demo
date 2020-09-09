@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const ColorItem = () => {
-    return (
-        <div className="ColorItem">
-            
-        </div>
-    )
-}
+const ColorItem = ({ color, group, setSelectedColor }) => {
+  const { hexColor } = color;
 
-export default ColorItem
+  const backgroundStyle = { backgroundColor: hexColor };
+  return (
+    <>
+      <div style={backgroundStyle} className="ColorItem Color ">
+        <input
+          onClick={() => setSelectedColor(hexColor)}
+          type="radio"
+          name={group}
+          id={hexColor}
+          value={hexColor}
+        />
+
+        <label style={backgroundStyle} htmlFor={hexColor}>
+          {" "}
+        </label>
+      </div>
+    </>
+  );
+};
+
+export default ColorItem;
