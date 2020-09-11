@@ -6,10 +6,12 @@ import { GlobalProvider } from "./context/GlobalState";
 import ProductList from "./Views/ProductList";
 
 import { Route, BrowserRouter as Router } from "react-router-dom";
+import AddColor from "./Views/AddColor";
 
 const routes = [
   { path: "/", name: "Color Picker", Component: PaletteView },
   { path: "/paints/:color", name: "Paints List", Component: ProductList },
+  { path: "/add-color", name: "Add Color", Component: AddColor}
 ];
 
 function App() {
